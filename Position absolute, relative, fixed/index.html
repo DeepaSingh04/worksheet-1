@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>error-debugging</title>
+</head>
+<body>
+    <div style="position: relative;">
+        <div style="position: absolute; top: 10px; left: 20px;">
+            I am now positioned relative to my parent.
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+
+
+    <div style="position: relative; z-index: 1; background: lightblue;">
+        This is on top.
+        <div style="position: relative; z-index: -1; background: lightgreen;">
+            This is below.
+        </div>
+    </div>
+    
+    
+</body>
+</html>

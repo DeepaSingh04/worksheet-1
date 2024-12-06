@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Header with Dropdown</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: blue;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%; 
+            right: 0;
+            background: white;
+            color: black;
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: none; 
+            width: 150px; 
+           
+        }
+        .menu-container {
+            position: relative;
+        }
+
+        button {
+            background: #444;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        main {
+            margin-top: 70px; 
+            padding: 20px;
+        }
+
+        .content-section {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>Fixed Header</div>
+        <div style="position: relative;">
+            <button onclick="toggleDropdown()">Menu</button>
+            <div id="dropdown" class="dropdown">
+                <p>Option 1</p>
+                
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-section">
+            <p>Scroll down to see the header remain fixed.</p>
+        </div>
+        <div class="content-section">
+            <p>Additional content section 1.</p>
+        </div>
+        <div class="content-section">
+            <p>Additional content section 2.</p>
+        </div>
+        <div class="content-section">
+            <p>Additional content section 3.</p>
+        </div>
+        <div class="content-section">
+            <p>Additional content section 4</p>
+        </div>
+        <div class="content-section">
+            <p>Additional content section 5</p>
+        </div>
+    </main>
+
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById('dropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
